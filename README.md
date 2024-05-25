@@ -1,3 +1,16 @@
+
+## Reproduction steps
+
+1. Clone this repository
+2. Run `pnpm install && pnpm build && pnpm start`
+3. Open the following pages:
+   1. [/api/currentTime](http://localhost:3000/api/currentTime)
+   2. [/api/currentTimeFetch](http://localhost:3000/api/currentTimeFetch)
+   3. [/api/currentTimeTagged](http://localhost:3000/api/currentTimeTagged)
+5. Opening http://localhost:3000/api/revalidateApiResponse should force both API responses to be revalidated, but it does not. Refresh the other pages and observe the time.
+
+--
+
 This is a [Next.js](https://nextjs.org/) template to use when reporting a [bug in the Next.js repository](https://github.com/vercel/next.js/issues) with the `app/` directory.
 
 ## Getting Started
