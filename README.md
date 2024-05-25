@@ -10,6 +10,8 @@
 4. Opening [/api/revalidateApiResponse](http://localhost:3000/api/revalidateApiResponse) should force both API responses to be revalidated, but it does not. Refresh the other pages and observe the time.
 5. (Bonus points) Open [http://localhost:3000/](http://localhost:3000/) page and try using the server action to do the same revalidation. It also has no effect on the opened tabs.
 
+The only example where `revalidateTag` works is when we mark the API endpoint as `dynamic = "force-dynamic"` and tag the `fetch` request. While this is a workaround, it is not a solution, `fetch` cache doesn't utilize the CDN, so we still pay for the dynamic invocation, which can be a problem for APIs that are called frequently.
+
 --
 
 This is a [Next.js](https://nextjs.org/) template to use when reporting a [bug in the Next.js repository](https://github.com/vercel/next.js/issues) with the `app/` directory.

@@ -13,6 +13,9 @@ export async function GET() {
   revalidateTag("currentTimeFetchTag");
   revalidatePath("/api/currentTimeFetch");
 
+  revalidateTag("currentTimeFetchTagDynamic");
+  revalidatePath("/api/currentTimeFetchDynamic");
+
   const currentTime = new Date().toISOString().slice(11, 19);
   return new Response(`API response is revalidated! ${currentTime}`, {
     status: 200,

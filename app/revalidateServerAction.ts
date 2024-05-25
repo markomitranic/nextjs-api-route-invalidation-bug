@@ -10,4 +10,7 @@ export async function revalidateServerAction() {
 
   revalidateTag("currentTimeFetchTag");
   revalidatePath("/api/currentTimeFetch");
+
+  revalidateTag("currentTimeFetchTagDynamic");
+  revalidatePath("/api/currentTimeFetchDynamic");
 }
