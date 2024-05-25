@@ -7,7 +7,8 @@
    1. [/api/currentTime](http://localhost:3000/api/currentTime)
    2. [/api/currentTimeFetch](http://localhost:3000/api/currentTimeFetch)
    3. [/api/currentTimeTagged](http://localhost:3000/api/currentTimeTagged)
-5. Opening http://localhost:3000/api/revalidateApiResponse should force both API responses to be revalidated, but it does not. Refresh the other pages and observe the time.
+4. Opening [/api/revalidateApiResponse](http://localhost:3000/api/revalidateApiResponse) should force both API responses to be revalidated, but it does not. Refresh the other pages and observe the time.
+5. (Bonus points) Open [http://localhost:3000/](http://localhost:3000/) page and try using the server action to do the same revalidation. It also has no effect on the opened tabs.
 
 --
 
